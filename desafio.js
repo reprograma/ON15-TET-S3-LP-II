@@ -10,3 +10,4 @@ let clienteLilit = [
     {produto: 'Salto agulha 39', valor: 250.0}, 
     {produto: 'Tênis casual preto', valor: 120.0}, 
     {produto: 'meia calça transparente', valor: 30.0}]
+
