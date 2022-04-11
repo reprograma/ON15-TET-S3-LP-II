@@ -255,7 +255,7 @@ let camaroes = 0.512
 
 #### 4.2. Arrow Function
 
-- Uma sintaxe mais cura e moderna em relação a expressão `function` e podem substituir em quase todos os casos de forma a diminuir a complexidade de leitura em diversos casos;
+- Uma sintaxe mais curta e moderna em relação a expressão `function` e podem substituir em quase todos os casos de forma a diminuir a complexidade de leitura em diversos casos;
 - As arrow functions são geralmente anônimas, mas podem ser nomeadas* ou atribuidas a variáveis para que possam ser invocadas; 
 - Estas expressões de funções tem algumas limitações e são melhor utilizadas em funções que não sejam métodos e nem devem ser usadas como construtores;
 
@@ -363,7 +363,7 @@ console.log(dataLonga); // sábado, 9 de abril de 2022
 2. Critérios de aceite:
   - Crie uma função que calcule a compra das clientes e aplique toda a lógica necessária;
   - O retorno deve ser o valor total (soma dos valores dos produtos), desconto aplicado e valor final (valor total - descontos) e a informação do cupom ganho, caso se aplique;
-  - Como DESAFIO EXTRAÇ o retorno pode conter também Data e Hora da compra;
+  - Como DESAFIO EXTRA o retorno pode conter também Data e Hora da compra;
   - A simulação do seu código deve atender 3 clientes, uma delas é a Lilit que realizou a seguinte compra:
     
   ```js
