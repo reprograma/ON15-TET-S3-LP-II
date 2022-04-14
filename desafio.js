@@ -1,3 +1,5 @@
+//NOME: Maria Fernanda Moreira Tavares
+
 let clienteLilit = [
     {produto: 'Bolsa pequena', valor: 49.0}, 
     {produto: 'Cinto preto', valor: 22.0}, 
@@ -11,53 +13,65 @@ let clienteLilit = [
     {produto: 'Tênis casual preto', valor: 120.0}, 
     {produto: 'meia calça transparente', valor: 30.0}]
 
-function realizarCompra(comprasDaCliente) {
-    let valorTotal = 0 // variável com a soma de todos os valores dos produtos sem desconto
-    let descontoAplicado = 0 // variável com a soma de todos os descontos aplicados
-    let valorFinal = 0 // variável com a soma de todos os valores dos produtos com desconto
-    let quantidadeDeProdutos = comprasDaCliente.length
+    let clienteMalu = [
+        {produto: 'Bolsa pequena', valor: 30.00}, 
+        {produto: 'Cinto preto', valor: 45.00}, 
+        {produto: 'Jaqueta Jeans', valor: 10.00}, 
+        {produto: 'Calça preta', valor: 56.00}, 
+        {produto: 'Blusa simples', valor: 40.00}, 
+        {produto: 'Calça jeans clara', valor: 30.00}, 
+        {produto: 'Blusa amarela gola alta', valor: 22.00},
+        {produto: 'Blusa rosa gola alta', valor: 20.00},
+        {produto: 'Blusa verde gola alta', valor: 15.00},
+        {produto: 'Blusa lilás gola alta', valor: 35.00},
+        {produto: 'Blusa branca gola alta', valor: 40.00}
 
-    for(let item of comprasDaCliente) {
-        valorTotal += item.valor
-        if (item.valor >= 200.0) {
-            descontoAplicado += (item.valor * 0.5)
-            valorFinal += (item.valor * 0.5)
-        } else if (item.valor >= 100.0) {
-            descontoAplicado += (item.valor * 0.2)
-            valorFinal += (item.valor * 0.8)
-        } else if (item.valor >= 80.0) {
-            descontoAplicado += (item.valor * 0.1)
-            valorFinal += (item.valor * 0.9)
-        } else if (item.valor >= 50.0) {
-            descontoAplicado += (item.valor * 0.05)
-            valorFinal += (item.valor * 0.95)
-        } else {
-            valorFinal += item.valor
+        ]
+
+        let clienteCarol = [
+            {produto: 'Bolsa grande', valor: 350.00}, 
+            {produto: 'Cinto rosa', valor: 45.00}, 
+            {produto: 'Jaqueta de couro', valor: 150.00}, 
+            {produto: 'Anel de prata', valor: 80.00}, 
+            {produto: 'Blusão', valor: 40.00}, 
+            {produto: 'Calça jeans preta', valor: 77.00}, 
+            {produto: 'Biquini Rosa', valor: 85.00} 
+            ]
+
+    function calcularValor(cliente){
+        let valorTotal =0;
+        let desconto =0;
+        let valorFinal =0;
+        let quantidadeItens= cliente.length;
+        const data = new Date();
+        for(let produto of cliente){
+            valorTotal += produto.valor;
+            if (produto.valor >= 50 && produto.valor <80){
+                desconto += produto.valor * 0.05;
+            }
+            else if (produto.valor >= 80 && produto.valor <100){
+                desconto += produto.valor * 0.10;
+            }
+            else if (produto.valor >= 100 && produto.valor <200){
+                desconto += produto.valor * 0.20;
+            }
+            else if (produto.valor >= 200){
+                desconto += produto.valor * 0.50;
+            }
         }
+        console.log(`-- Bem-Vindo! A data de hoje é ${data.toDateString('pt-br')}`)
+        console.log(`-- Olá ! Sua lista de compra foi :`)
+        console.table(cliente)
+        console.log(` --O somatorio dos seus ${quantidadeItens} produtos sem desconto ficou : R$ ${valorTotal}, com o desconto o valor ficou: R$ ${valorTotal - desconto} !!!`)
+        if (quantidadeItens>10 || valorFinal >800){
+            console.log(" -- Parabéns você ganhou um cupom de R$50 para sua proxima compra!!!! <3")
+        }
+
     }
+    
+    calcularValor(clienteLilit);
+    calcularValor(clienteMalu);
+    calcularValor(clienteCarol);
 
-    let dataDaCompra = new Date()
-    console.log(dataDaCompra)
 
-    let notaFiscal = {
-        "Valor Total": `R$${valorTotal.toFixed(2).replace('.', ',')}`,
-        "Desconto Aplicado": `R$${descontoAplicado.toFixed(2).replace('.', ',')}`,
-        "Valor Final": `R$${valorFinal.toFixed(2).replace('.', ',')}`,
-        "Data de Compra": dataDaCompra.toLocaleDateString('pt-BR', {
-            hour: 'numeric',
-            minute: 'numeric',
-            second: 'numeric'
-        })
-    }
-
-    if(quantidadeDeProdutos > 10 || valorFinal > 800.0) {
-        return console.table({
-            ...notaFiscal,
-            "Bônus": 'Você ganhou um cupom de R$50,00 para a sua prõxima compra'
-        })
-    } else {
-        return console.table(notaFiscal)
-    }
-}
-
-realizarCompra(clienteLilit)
+    
