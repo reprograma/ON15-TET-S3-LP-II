@@ -11,6 +11,19 @@ let clienteLilit = [
     {produto: 'Tênis casual preto', valor: 120.0}, 
     {produto: 'meia calça transparente', valor: 30.0}]
 
+let clienteMariazinha = [
+    {produto: 'Calça mom jeans', valor: 110.0},
+    {produto: 'Cropped listrado', valor: 35.0},
+    {produto: 'Tênis street azul', valor: 190.0},
+    {produto: 'Lenço cetim', valor: 30.0}]
+
+let clienteGabinha = [
+    {produto: 'Bermuda biker', valor: 80.0},
+    {produto: 'Boné vermelho', valor: 50.0},
+    {produto: 'Bota tratorada', valor: 235.0},
+    {produto: 'Blusão verde', valor: 79.0}]
+
+
 function realizarCompra(comprasDaCliente) {
     let valorTotal = 0 // variável com a soma de todos os valores dos produtos sem desconto
     let descontoAplicado = 0 // variável com a soma de todos os descontos aplicados
@@ -53,11 +66,15 @@ function realizarCompra(comprasDaCliente) {
     if(quantidadeDeProdutos > 10 || valorFinal > 800.0) {
         return console.table({
             ...notaFiscal,
-            "Bônus": 'Você ganhou um cupom de R$50,00 para a sua prõxima compra'
+            "Bônus": 'Você ganhou um cupom de R$50,00 para a sua próxima compra'
         })
     } else {
         return console.table(notaFiscal)
     }
 }
 
+
+
+realizarCompra(clienteGabinha)
 realizarCompra(clienteLilit)
+realizarCompra(clienteMariazinha)
