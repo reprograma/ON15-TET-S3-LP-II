@@ -73,6 +73,8 @@ function realizarCompra(comprasDaCliente) {
     }
 }
 
+
+
 realizarCompra(clienteGabinha)
 realizarCompra(clienteLilit)
 realizarCompra(clienteMariazinha)
