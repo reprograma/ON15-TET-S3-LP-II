@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 // switch/case
 
 let regiao = 'sudoeste'
@@ -26,6 +28,7 @@ console.log('--------------------------------------------------------------')
 
 let horario = 4
 
+>>>>>>> 8f8a09e53bc01635e6ba352132c14714869385bb
 if (horario >= 0 && horario < 6) { 
     console.log("madrugada");
 } else if (horario >= 6 && horario < 12) { 
@@ -38,6 +41,30 @@ if (horario >= 0 && horario < 6) {
     console.log("horário inválido"); 
 }
 
+<<<<<<< HEAD
+// switch/case
+
+let regiao 
+
+switch (regiao) {
+    case 'nordeste':
+        console.log('possui 9 estados')
+        break;
+    case "norte":
+        console.log('possui 7 estados')
+        break;
+    case 'centro-oeste':
+        console.log('possui 3 estados e o DF')
+        break;
+    case 'sudeste':
+        console.log('possui 4 estados')
+        break;
+    case 'sul':
+        console.log('possui 3 estados')
+        break;
+    default: 
+    console.log('essa regiao não existe no Brasil') // se alguém digitar um valor diferente de uma região
+=======
 // construindo o mesmo caso do if...else acima com switch e limitações de uso!
 
 console.log('--------------------------------------------------------------')
@@ -115,5 +142,6 @@ if(idh >= 0 && idh < 0.5) {
     console.log(`IDH muito alto`)
 } else {
     console.log('IDH inválido')
+>>>>>>> 8f8a09e53bc01635e6ba352132c14714869385bb
 }
 
