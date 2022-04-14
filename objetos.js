@@ -1,3 +1,4 @@
+
 // Objeto é uma coleção de dados vinculados ao mesmo contexto - chave:valor
 
 const aluna = {
@@ -30,6 +31,7 @@ professora.cidade = "São Paulo";
 // console.log(aluna.nome)
 // // console.log(aluna.ola("Julia"))
 // console.log(professora)
+
 const aluna = {
     nome: { primeiro: "Brena",
             segundo: 'Odwyer'},
@@ -49,3 +51,4 @@ professora.sobrenome = 'Bandeira'
 professora.cidade = 'São Paulo'
 
 // console.log(professora)
+

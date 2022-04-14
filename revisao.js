@@ -1,3 +1,4 @@
+
 // let horario = 5
 
 // if (horario >= 0 && horario < 6) { 
@@ -18,6 +19,7 @@ console.log("--------------------------------------------------------")
 // Construindo o mesmo caso do if...else acima com switch e limitações de uso!s
 
 let horario = 35;
+
 // switch/case
 
 let regiao = 'sudoeste'
@@ -62,6 +64,7 @@ if (horario >= 0 && horario < 6) {
 
 console.log('--------------------------------------------------------------')
 
+
 switch (horario) {
     case 0:
     case 1:
@@ -71,6 +74,9 @@ switch (horario) {
     case 5:
         console.log("madrugada");
         console.log("madrugada")
+
+        console.log("madrugada")
+
         break;
     case 6:
     case 7:
@@ -80,6 +86,9 @@ switch (horario) {
     case 11:
         console.log("manhã");
         console.log("manhã")
+
+        console.log("manhã")
+
         break;
     case 12:
     case 13:
@@ -87,8 +96,9 @@ switch (horario) {
     case 15:
     case 16:
     case 17:
+
         console.log("tarde");
-        console.log("tarde")
+
         break;
     case 18:
     case 19:
@@ -109,12 +119,20 @@ switch (horario) {
 
 console.log("--------------------------------------------------------")
         console.log("noite")
+
+        console.log("noite");
         break;
     default:
         console.log("horário inválido");
+        break;
 }
 
-console.log('--------------------------------------------------------------')
+
+
+
+
+console.log("--------------------------------------------------------")
+
 
 // EXERCÍCIO DE REVISÃO DE IF...ELSE
 /*
@@ -151,4 +169,5 @@ if(idh >= 0 && idh < 0.5) {
 } else {
     console.log('IDH inválido')
 }
+
 

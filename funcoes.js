@@ -1,4 +1,5 @@
 
+
 // função sem argumentos
 // function funcaoUm(){
 //     return console.log(`retorno da função que não recebe argumentos`)
@@ -42,6 +43,7 @@ funcaoTres(5, 6)
 // Arrow Function
 
 // function nome() {}
+
 // funcao sem argumentos
 
 function somar1() {
@@ -74,10 +76,12 @@ somar2(resultado)
 
 // arrow function
 
+
 // () => {}
 
 let somar3 = (numero1, numero2) => console.log(numero1 + numero2)
 
 somar3(10,15)
+
 
 somar3(6, 3)

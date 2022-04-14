@@ -1,3 +1,4 @@
+
 // for
 
 for (let i = 0; i <= 10; i++) {
@@ -37,6 +38,7 @@ while (u <= 10){
         console.log(`número ${u}`)
         u = u + 4
     }
+
 // for 
 
 for (let i = 0; i <= 10; i++) {
@@ -68,6 +70,7 @@ console.log(letras[2])
 let u = 0;
 
 while (u <= 10) {
+
     console.log(`número ${u}`)
     u++
 }
@@ -76,11 +79,15 @@ console.log("--------------------------------------------------------")
 
 let y = 15;
 let y = 15; 
+
+let y = 15; 
+
 while (y < numeros.length) {
     const dobro = numeros[y] * 2
     console.log(dobro)
     y++
 }
+
 
 console.log("--------------------------------------------------------")
 
@@ -114,6 +121,7 @@ for (let numero of lista) {
     console.log(`o dobro de ${lista[numero]} é ${dobro}`)
 }
 // para cada numero do array lista faça
+
 // do... while
 
 let total = 0
@@ -132,3 +140,4 @@ for (let numero of numeros) {
     const dobro = numeros[numero] * 2
     console.log(`o dobro de ${numeros[numero]} é ${dobro}`)
 }
+
