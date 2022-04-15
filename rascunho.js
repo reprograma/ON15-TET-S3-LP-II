@@ -1,6 +1,6 @@
- //clientes
+  //clientes
 
- let clienteLilit = [
+  let clienteLilit = [
     {produto: 'Bolsa pequena', valor: 49.0}, 
     {produto: 'Cinto preto', valor: 22.0}, 
     {produto: 'Jaqueta Jeans', valor: 300.0}, 
@@ -16,37 +16,37 @@
     console.log ("Tabela de compra de Lilit")
 
 let clienteJordana = [
-     {produto: 'Gel lubrificante', valor: 30.0},
-     {produto: 'Camisinha extra sensivel', valor: 15.0},
-     {produto: 'Vibrador egg', valor: 20.0},
-     {produto: 'Pênis de silicone vibrador', valor: 100.0},
-     {produto: 'Chuca reutilizável', valor: 40.0},
-     {produto: 'Massageador prostatico de dedo', valor: 20.0},
-     {produto: 'Bolas massageadoras estouráveis', valor: 20.0},
-     {produto: 'Gel beijavel', valor: 15.0},
-     {produto: 'Coelhinho masturbador', valor: 150.0},
-     {produto: 'Fantasia mulher gato', valor: 200.0},
-     {produto: 'Livro de kama sutra', valor: 50.0},
-     {produto: 'Algemas', valor: 50.0}]
+     {produto: 'gel lubrificante', valor: 30.0},
+     {produto: 'camisinha extra sensivel', valor: 15.0},
+     {produto: 'vibrador egg', valor: 20.0},
+     {produto: 'pênis de silicone vibrador', valor: 100.0},
+     {produto: 'chuca reutilizável', valor: 40.0},
+     {produto: 'massageador prostatico de dedo', valor: 20.0},
+     {produto: 'bolas massageadoras estouráveis', valor: 20.0},
+     {produto: 'gel beijavel', valor: 15.0},
+     {produto: 'coelhinho masturbador', valor: 150.0},
+     {produto: 'fantasia mulher gato', valor: 200.0},
+     {produto: 'livro de kama sutra', valor: 50.0},
+     {produto: 'alegmas', valor: 50.0}]
     console.table (clienteJordana)
     console.log ("Tabela de Compras de Jordana") 
 
 let clienteMelquiades = [
-    {produto: 'Gel lubrificante', valor: 30.0},
-    {produto: 'Camisinha extra grande', valor: 15.0},
-    {produto: 'Erva calmante', valor: 50.0},
-    {produto: 'Cueca jockstrap', valor: 30.0},
-    {produto: 'Chuca reutilizável', valor: 40.0},
-    {produto: 'Massageador prostático', valor: 20.0},
-    {produto: 'Gel anal', valor: 20.0},
-    {produto: 'Gel beijavel', valor: 15.0},
-    {produto: 'Chicote bsdm', valor: 150.0},
-    {produto: 'Fantasia professora', valor: 200.0},
-    {produto: 'Livro da fada boqueteira', valor: 50.0},
-    {produto: 'Algemas', valor: 50.0},
-    {produto: 'Anel peniano', valor: 40.0},
-    {produto: 'Baralho de posição ka sutra', valor: 20.0},
-    {produto: 'Coleira dome', valor: 50.0},]
+    {produto: 'gel lubrificante', valor: 30.0},
+    {produto: 'camisinha extra grande', valor: 15.0},
+    {produto: 'erva calmante', valor: 50.0},
+    {produto: 'cueca jockstrap', valor: 30.0},
+    {produto: 'chuca reutilizável', valor: 40.0},
+    {produto: 'massageador prostático', valor: 20.0},
+    {produto: 'gel anal', valor: 20.0},
+    {produto: 'gel beijavel', valor: 15.0},
+    {produto: 'chicote bsdm', valor: 150.0},
+    {produto: 'fantasia professora', valor: 200.0},
+    {produto: 'livro da fada boqueteira', valor: 50.0},
+    {produto: 'alegmas', valor: 50.0},
+    {produto: 'anel peniano', valor: 40.0},
+    {produto: 'baralho de posição ka sutra', valor: 20.0},
+    {produto: 'coleira dome', valor: 50.0},]
     console.table(clienteMelquiades)
     console.log ("Tabela de Compras de Melquiades")
    
@@ -81,10 +81,10 @@ let clienteMelquiades = [
             //console.log(dataDaCompra)  
     
             let notaFiscal = {
-                "Aqué Total:":`R$${valorTotal.toFixed(2).replace('.', ',')}`,
-                "Regalo Aplicado:":`R$${descontoAplicado.toFixed(2).replace('.', ',')}`,
-                "Aqué Final:":`R$${valorFinal.toFixed(2).replace('.', ',')}`,
-                "Data da Compra:": dataDaCompra.toLocaleDateString ("pt-BR",{
+                "Aqué Total":`R$${valorTotal.toFixed(2).replace('.', ',')}`,
+                "Regalo Aplicado":`R$${descontoAplicado.toFixed(2).replace('.', ',')}`,
+                "Aqué Final":`R$${valorFinal.toFixed(2).replace('.', ',')}`,
+                "Data da Compra": dataDaCompra.toLocaleDateString ("pt-BR",{
                     hour:"numeric",
                     minute: "numeric",
                     second:"numeric"
@@ -105,4 +105,4 @@ console.log ("Valores de compra de Lilit")
 realizarCompra(clienteJordana) 
 console.log ("Valores de Compras de Jordana")
 realizarCompra(clienteMelquiades)
-console.log ("Valores de Compras de Melquiades")
+console.log ("Vaores de Compras de Melquiades")
