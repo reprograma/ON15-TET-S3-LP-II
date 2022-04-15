@@ -11,10 +11,28 @@ let clienteLilit = [
     {produto: 'Tênis casual preto', valor: 120.0}, 
     {produto: 'meia calça transparente', valor: 30.0}]
 
+let clientePaola= [
+    {produto: 'Bolsa grande', valor: 110.0}, 
+    {produto: 'Cinto marron', valor: 25.0}, 
+    {produto: 'Jaqueta Jeans', valor: 300.0}, 
+    {produto: 'Calça azul', valor: 200.0}, 
+    {produto: 'Blusa simples', valor: 35.0}, 
+    {produto: 'Saia Longa', valor: 129.95}, 
+    {produto: 'Short verde canelado', valor: 80.0}, 
+    {produto: 'Vestido estampa animal', valor: 79.95}, 
+    {produto: 'Tênis casual branco', valor: 120.0}, 
+    {produto: 'Vestido midi babado open', valor: 119.95}]
+
+let clienteSuzana = [
+    {produto: 'Bolsa infantil unicórnio', valor: 75.0}, 
+    {produto: 'Jaqueta Infantil coração', valor: 119.0}, 
+    {produto: 'Blusa Infantil estampa unicórnio', valor: 20.0}, 
+    {produto: 'Pijama infantil', valor: 129.9}]        
+
 function realizarCompra(comprasDaCliente) {
-    let valorTotal = 0 // variável com a soma de todos os valores dos produtos sem desconto
-    let descontoAplicado = 0 // variável com a soma de todos os descontos aplicados
-    let valorFinal = 0 // variável com a soma de todos os valores dos produtos com desconto
+    let valorTotal = 0 
+    let descontoAplicado = 0 
+    let valorFinal = 0 
     let quantidadeDeProdutos = comprasDaCliente.length
 
     for(let item of comprasDaCliente) {
@@ -39,21 +57,26 @@ function realizarCompra(comprasDaCliente) {
     let dataDaCompra = new Date()
     console.log(dataDaCompra)
 
+    console.log('==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==')
+    console.log('                               CUPOM FISCAL                                        ')
+    console.log('==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==')
+
     let notaFiscal = {
-        "Valor Total": `R$${valorTotal.toFixed(2).replace('.', ',')}`,
-        "Desconto Aplicado": `R$${descontoAplicado.toFixed(2).replace('.', ',')}`,
-        "Valor Final": `R$${valorFinal.toFixed(2).replace('.', ',')}`,
         "Data de Compra": dataDaCompra.toLocaleDateString('pt-BR', {
             hour: 'numeric',
             minute: 'numeric',
-            second: 'numeric'
-        })
+            second: 'numeric'}),
+        "Valor Total": `R$ ${valorTotal.toFixed(2).replace('.', ',')}`,
+        "Desconto Aplicado": `R$ ${descontoAplicado.toFixed(2).replace('.', ',')}`,
+        "Valor Final": `R$ ${valorFinal.toFixed(2).replace('.', ',')}`
+        
+        
     }
 
     if(quantidadeDeProdutos > 10 || valorFinal > 800.0) {
         return console.table({
             ...notaFiscal,
-            "Bônus": 'Você ganhou um cupom de R$50,00 para a sua prõxima compra'
+            "Bônus": 'Parabéns! Você ganhou um cupom de R$50,00 para a sua prõxima compra'
         })
     } else {
         return console.table(notaFiscal)
@@ -61,3 +84,5 @@ function realizarCompra(comprasDaCliente) {
 }
 
 realizarCompra(clienteLilit)
+realizarCompra(clientePaola)
+realizarCompra(clienteSuzana)
