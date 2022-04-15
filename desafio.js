@@ -1,3 +1,5 @@
+//Primeira Cliente:
+
 let clienteLilit = [
     {produto: 'Bolsa pequena', valor: 49.0}, 
     {produto: 'Cinto preto', valor: 22.0}, 
@@ -10,6 +12,29 @@ let clienteLilit = [
     {produto: 'Salto agulha 39', valor: 250.0}, 
     {produto: 'Tênis casual preto', valor: 120.0}, 
     {produto: 'meia calça transparente', valor: 30.0}]
+
+//Segunda Cliente:
+
+let clienteSamara = [
+    {produto: 'Blusa branca', valor: 39.0}, 
+    {produto: 'short jeans', valor: 69.0}, 
+    {produto: 'Jaqueta de couro', valor: 300.0}, 
+    {produto: 'sapato branco', valor: 159.0}, 
+    {produto: 'Calça social', valor: 135.0}, 
+    {produto: 'Cinto preto', valor: 22.0},
+    {produto: 'Cropped vermelho', valor: 40.0}]
+
+//Terceira Cliente:
+
+let clienteJoandra = [
+    {produto: 'Salto fino Zattini', valor: 159.0}, 
+    {produto: 'Chinelo Havaianas slim ', valor: 39.0}, 
+    {produto: 'T-shirt colorida', valor: 25.0}, 
+    {produto: 'Tênis Olympikus', valor: 179.0}, 
+    {produto: 'Calça jeans escura', valor: 130.0}, 
+    {produto: 'Blusa baby look preta', valor: 35.0}]
+
+
 
 function realizarCompra(comprasDaCliente) {
     let valorTotal = 0 // variável com a soma de todos os valores dos produtos sem desconto
@@ -40,7 +65,7 @@ function realizarCompra(comprasDaCliente) {
     console.log(dataDaCompra)
 
     let notaFiscal = {
-        "Valor Total": `R$${valorTotal.toFixed(2).replace('.', ',')}`,
+        "Valor Total da Compra": `R$${valorTotal.toFixed(2).replace('.', ',')}`,
         "Desconto Aplicado": `R$${descontoAplicado.toFixed(2).replace('.', ',')}`,
         "Valor Final": `R$${valorFinal.toFixed(2).replace('.', ',')}`,
         "Data de Compra": dataDaCompra.toLocaleDateString('pt-BR', {
@@ -55,9 +80,12 @@ function realizarCompra(comprasDaCliente) {
             ...notaFiscal,
             "Bônus": 'Você ganhou um cupom de R$50,00 para a sua prõxima compra'
         })
+        
     } else {
         return console.table(notaFiscal)
     }
 }
 
 realizarCompra(clienteLilit)
+realizarCompra(clienteSamara)
+realizarCompra(clienteJoandra)
