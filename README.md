@@ -397,4 +397,4 @@ console.log(dataLonga); // sábado, 9 de abril de 2022
 
 ² https://www.br.undp.org/content/brazil/pt/home/idh0/rankings/idh-global.html
 
-³ https://developer.mozilla.org/pt-BR/docs/Web/JavaScript 
+³ https://developer.mozilla.org/pt-BR/docs/Web/JavaScript # desafio_reprograma
