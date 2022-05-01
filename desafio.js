@@ -47,6 +47,8 @@ function calcular(cliente) {
         valorTotal += total.valor;
         quantidadeTotalPeca++;
     }
+    // Renata, quando executamos 2 repetições/iterações na mesma array quando podemos realizar uma única estamos perdendo na performance da nossa aplicação
+    // Poderiamos ter apenas um for que além de calcular o desconto já calcularia também o valorTotal e a quantidadeTotalPeca, né?
 
     
 
